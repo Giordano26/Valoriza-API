@@ -29,12 +29,13 @@
 ### Users
 - <strong>(POST)</strong> Create User : `http://localhost:3000/users` <p>
 Create a register of an user on the database
+	
 ```json
 request body:
 
 {
-    "name" : "Test User",
-	"email" : "user@test.com",
+	"name" : "Test User",
+    	"email" : "user@test.com",
 	"password": "12345",
 	"admin": false
 }
@@ -47,7 +48,7 @@ Create an auth token to ensure the user is logged on the system
 request body:
 
 {
-    "email" : "user@test.com",
+    	"email" : "user@test.com",
 	"password":  "12345"
 }
 
@@ -90,12 +91,12 @@ no request body
 ### Compliments
 - <strong>(POST)</strong> Create a compliment to other user : `http://localhost:3000/compliments` <p>
 
-```json 
+```json
 Auth: Bearer  <login token>
 
 request body: 
 {
-    "tag_id": "<tag id on database>",
+    	"tag_id": "<tag id on database>",
 	"user_receiver": "<user id receiver database>",
 	"message": "put a nice message here"
 }
@@ -105,6 +106,7 @@ request body:
 ```json
 Auth: Bearer <login token>
 
+no request body
 ```
 
 - <strong>(GET)</strong> List all compliments received by an user (based on login token): `http://localhost:3000/users/compliments/receive` <p>
@@ -112,6 +114,7 @@ Auth: Bearer <login token>
 ```json
 Auth: Bearer <login token>
 
+no request body
 ```
 ## Dependencies 
 
